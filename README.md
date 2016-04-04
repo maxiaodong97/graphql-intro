@@ -11,7 +11,7 @@
 2. nodemon index.js
 3. try following requests: 
 
-'''
+````shellscript
 $ curl -v -XPOST -H "Content-Type:application/graphql" -d '{__schema {queryType {name, fields {name, description}}}}' http://localhost:3000/graphql
 *   Trying ::1...
 * Connected to localhost (::1) port 3000 (#0)
@@ -123,4 +123,3 @@ $curl -v -XPOST -H "Content-Type:application/graphql" -d 'mutation RootMutationT
   }
 * Connection #0 to host localhost left intact
 
-'''

@@ -11,7 +11,8 @@
 2. nodemon index.js
 3. try following requests: 
 
-mdm:graphql-intro xma$ curl -v -XPOST -H "Content-Type:application/graphql" -d '{__schema {queryType {name, fields {name, description}}}}' http://localhost:3000/graphql
+'''
+$ curl -v -XPOST -H "Content-Type:application/graphql" -d '{__schema {queryType {name, fields {name, description}}}}' http://localhost:3000/graphql
 *   Trying ::1...
 * Connected to localhost (::1) port 3000 (#0)
 > POST /graphql HTTP/1.1
@@ -45,7 +46,9 @@ mdm:graphql-intro xma$ curl -v -XPOST -H "Content-Type:application/graphql" -d '
     }
   }
 * Connection #0 to host localhost left intact
-}mdm:graphql-intro xma$curl -v -XPOST -H "Content-Type:application/graphql" -d 'query RootQueryType {count}' http://localhost:3000/graphql
+}
+
+$curl -v -XPOST -H "Content-Type:application/graphql" -d 'query RootQueryType {count}' http://localhost:3000/graphql
 *   Trying ::1...
 * Connected to localhost (::1) port 3000 (#0)
 > POST /graphql HTTP/1.1
@@ -69,7 +72,9 @@ mdm:graphql-intro xma$ curl -v -XPOST -H "Content-Type:application/graphql" -d '
     "count": 0
   }
 * Connection #0 to host localhost left intact
-}mdm:graphql-intro xma$curl -v -XPOST -H "Content-Type:application/graphql" -d 'mutation RootMutationType {updateCount}' http://localhost:3000/graphql
+}
+
+$curl -v -XPOST -H "Content-Type:application/graphql" -d 'mutation RootMutationType {updateCount}' http://localhost:3000/graphql
 *   Trying ::1...
 * Connected to localhost (::1) port 3000 (#0)
 > POST /graphql HTTP/1.1
@@ -118,3 +123,4 @@ mdm:graphql-intro xma$ curl -v -XPOST -H "Content-Type:application/graphql" -d '
   }
 * Connection #0 to host localhost left intact
 
+'''
